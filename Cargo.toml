@@ -1,0 +1,18 @@
+[package]
+name = "tauri-plugin-test"
+version = "0.0.0"
+authors = [ "You" ]
+description = ""
+edition = "2021"
+rust-version = "1.57"
+exclude = ["/examples"]
+
+[dependencies]
+tauri = { version = "1.1.1" }
+libloading = "0.7.3"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+strip = true  # Automatically strip symbols from the binary.
